@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "display message"
+echo "Display message"
 read message
-echo "$message"
+echo "This is your $message"
