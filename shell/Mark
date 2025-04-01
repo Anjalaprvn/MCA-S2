@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "Enter Mark1: "
+read x
+echo "Enter Mark2: "
+read y
+echo "Enter Mark3: "
+read z
+d=$((x + y + z))
+echo "Sum is $d"
+avg=$((d / 3))
+echo "Average is $avg"
+if [ $avg -gt 90 ]; then
+    echo "X+"
+elif [ $avg -gt 50 ]; then
+    echo "Y+"
+elif [ $avg -lt 50 ]; then
+    echo "Fail"
+else
+    echo "Invalid"
+fi
