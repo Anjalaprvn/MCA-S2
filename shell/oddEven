@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "enter a nmbr"
+read a
+if (( $a % 2 == 0 ))
+then
+        echo " its a even nmbr"
+else
+        echo " its an odd nmbr"
+fi
+~
+~
