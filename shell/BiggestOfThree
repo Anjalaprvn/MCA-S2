@@ -7,10 +7,10 @@ echo "enter thrd nmbr"
 read c
 if [[ $a -gt $b  &&  $a -gt $c ]]
 then
-        echo  "frst one is greater"
+        echo  "$a is greater"
 elif [[ $b -gt $c  &&  $b -gt $c ]]
 then
-        echo "secnd one is greatest"
+        echo "$b is greatest"
 else
-        echo "third one is greater than others"
+        echo "$c is greater than others"
 fi
