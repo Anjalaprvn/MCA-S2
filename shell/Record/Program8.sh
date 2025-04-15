@@ -1,36 +1,27 @@
 #!/bin/bash
-echo "Enter a number:"
-read a
-if [ $a -lt 2 ]; then
-echo "$a is not prime"
-else
-prime=true
-for ((i=2; i<=a/2; i++)); do
-if [ $((a % i)) -eq 0 ]; then
-prime=false
-break
-fi
+read -p "Enter a number: " num
+i=2
+while [ $i -le $(($num / 2)) ]; do
+  if [ $((num % i)) -eq 0 ]; then
+    echo "$num is not prime"
+    exit
+  fi
+  i=$((i + 1))
 done
-if $prime; then
-echo "$a is prime"
-else
-echo "$a is not prime"
-fi
-fi
+echo "$num is prime"
 
 
 Algorithm
-Step 1: Start the program
-Step 2: Display the message: "Enter a number:"
-Step 3: Read the number and store it in variable a
-Step 4: Check if a is less than 2 (prime numbers are greater than 1)
-        If true, display: "$a is not prime" and go to Step 11
-        If false, go to Step 5
-Step 5: Set a flag prime=true to assume the number is prime initially
-Step 6: Start a for loop from i=2 to i<=a/2 (no need to check beyond a/2 as factors will repeat)
-        For each iteration, check if a % i == 0 (if a is divisible by i)
-        If true, set prime=false, exit the loop (as the number is not prime)
-Step 7: After the loop ends, check the value of prime
-        If prime is still true, display: "$a is prime"
-        If prime is false, display: "$a is not prime"
-Step 8: End the program
+
+step1:Start the program
+Step2:Prompt the user to enter a number and store it in the variable num
+Step3:Initialize a variable i = 2
+step4:Check if i is less than or equal to num / 2
+        If true, continue to Step 5
+        If false, go to Step 8
+Step5:Check if num % i == 0 (i.e., if num is divisible by i)
+        If true, print: "$num is not prime" and exit the program
+step6: Increment i by 1 (i = i + 1)
+Step7:Repeat the loop from Step 4
+Step8:If no divisors were found, print: "$num is prime"
+Step9:End the program
