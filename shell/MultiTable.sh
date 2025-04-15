@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -n "Display the Multiplication table of: "
+echo "Display the Multiplication table of:"
 read num
 i=1
 while [ $i -le 10 ]
