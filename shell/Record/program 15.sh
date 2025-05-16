@@ -33,10 +33,11 @@ Step 5: If the files are not the same, print that they are different.
 
 Step 6: If either of the inputs is not an ordinary file, display an error message.
 
-OUTPUT:
-$ bash compare.sh c.sh b.sh
-c.sh and b.sh are not same
+INPUT:
+bash compare.sh c.sh b.sh
 
+OUTPUT:
+c.sh and b.sh are not same
 
 
 
